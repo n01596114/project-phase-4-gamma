@@ -1,5 +1,5 @@
 import "@/app/globals.css";
-// import { NextAuthProvider } from "@/providers/NextAuthProvider";
+import { NextAuthProvider } from "@/providers/NextAuthProvider";
 import { Montserrat } from "next/font/google";
 
 const fontFamily = Montserrat({ subsets: ["latin"] });
@@ -16,11 +16,11 @@ export default function LoginPageLayout({
 }) {
   return (
     <html lang="en">
-      {/* <NextAuthProvider>
+      <NextAuthProvider>
         <body className={fontFamily.className + " text-white bg-paper-700"}>
           <main>{children}</main>
         </body>
-      </NextAuthProvider> */}
+      </NextAuthProvider>
     </html>
   );
 }
