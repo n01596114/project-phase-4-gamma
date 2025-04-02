@@ -6,7 +6,7 @@ import { signOut, useSession } from "next-auth/react";
 import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
 import CollectionTabs from "./CollectionTabs";
-// import SearchInput from "./SearchInput";
+import SearchInput from "./SearchInput";
 
 export default function Header() {
   const { data } = useSession();
@@ -37,7 +37,7 @@ export default function Header() {
           </button>
         </div>
 
-        {/* {pathname.includes("/search") && <SearchInput />} */}
+        {pathname.includes("/search") && <SearchInput />}
 
         {pathname.includes("/collection") &&
           pathname !== "/collection/tracks" && <CollectionTabs />}
